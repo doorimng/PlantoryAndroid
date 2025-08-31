@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CustomVerticalProgressBar" parent="@android:style/Widget.ProgressBar.Horizontal">
+        <!-- 커스텀 Drawable 적용 -->
+        <item name="android:progressDrawable">@drawable/progressbar_design_theme</item>
+        <!-- 기본 회전 -->
+        <item name="android:rotation">270</item>
+        <!-- 기본 색상 (fallback) -->
+        <item name="android:progressTint">#FF5722</item>
+        <!-- 기본 크기 -->
+        <item name="android:layout_width">25dp</item>
+        <item name="android:layout_height">200dp</item>
+    </style>
+
+</resources>

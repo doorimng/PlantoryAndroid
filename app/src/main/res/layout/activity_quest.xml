@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QuestActivity">
+
+    <TextView
+        android:id="@+id/questTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="77dp"
+        android:fontFamily="@font/dunggeunmo"
+        android:text="도전과제"
+        android:textSize="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/questBg"
+        android:layout_width="0dp"
+        android:layout_height="722dp"
+        android:layout_marginTop="131dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/questbg" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/questBg">
+
+        <ImageButton
+            android:id="@+id/quest1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/lockeditemquest" />
+
+        <ImageButton
+            android:id="@+id/quest2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/lockeditemquest" />
+
+        <ImageButton
+            android:id="@+id/quest3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/lockeditemquest" />
+
+        <ImageButton
+            android:id="@+id/quest4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/lockeditemquest" />
+
+        <ImageButton
+            android:id="@+id/quest5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/lockeditemquest" />
+
+        <ImageButton
+            android:id="@+id/quest6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/lockeditemquest" />
+
+        <ImageButton
+            android:id="@+id/quest7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/lockeditemquest" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
