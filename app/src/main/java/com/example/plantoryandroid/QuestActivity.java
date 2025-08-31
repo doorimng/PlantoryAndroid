@@ -1,7 +1,6 @@
 package com.example.plantoryandroid;
 
 import android.os.Bundle;
-import android.util.AndroidException;
 import android.view.View;
 import android.widget.ImageButton;
 
@@ -15,8 +14,8 @@ public class QuestActivity extends AppCompatActivity {
 
 
     public static int[] questConditonList = Data.questList ;
-    int nutrition = Data.nutrition ; //  영양제 3번
-    int water = Data.water ; // 물 5번
+    int nutrition = Data.nutritionCnt; //  영양제 3번
+    int water = Data.waterCnt; // 물 5번
     int flower = Data.flower ; // 꽃 핌
     int fruit = Data.fruit ; // 열매 열림
     int ventilation = Data.ventilation ; // 환기 팬 작동

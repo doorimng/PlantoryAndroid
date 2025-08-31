@@ -16,7 +16,6 @@ import androidx.core.view.WindowInsetsCompat;
 // 라즈베리파이 연결
 import android.widget.ImageView;
 import android.widget.TextView ;
-import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -111,8 +110,8 @@ public class MainActivity extends AppCompatActivity {
                         .setNegativeButton("예", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
-                                if ( Data.nutrition < 3 ) Data.nutrition = 0 ;
-                                if ( Data.water < 5 ) Data.water = 0 ;
+                                if ( Data.nutritionCnt < 3 ) Data.nutritionCnt = 0 ;
+                                if ( Data.waterCnt < 5 ) Data.waterCnt = 0 ;
                                 if ( Data.goodDay < 7 ) Data.goodDay = 0 ;
                                 Data.reset = 1 ;
 
@@ -129,6 +128,20 @@ public class MainActivity extends AppCompatActivity {
                 dialog.show() ;
             }
         });
+
+        // 물이 부족할 때 알림
+        if ( Data.water <= 20 ) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this) ;
+            builder.setTitle("물이 부족합니다!!")
+                    .setMessage("물통에 물을 채워주세요.")
+                    .setPositiveButton("확인", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                        }
+                    }) ;
+            AlertDialog dialog = builder.create() ;
+            dialog.show() ;
+        }
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());

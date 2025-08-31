@@ -20,12 +20,18 @@ public class Data {
      */
     public static int[] questList = {1, 2, 2, 2, 2, 2, 2, 2} ;
 
-    public static int nutrition = 3 ; //  영양제 3번
-    public static int water = 0 ; // 물 5번
+    public static int nutritionCnt = 3 ; //  영양제 3번
+    public static int waterCnt = 0 ; // 물 5번
     public static int flower = 1 ; // 꽃 핌
     public static int fruit = 0 ; // 열매 열림
     public static int ventilation = 1 ; // 환기 팬 작동
     public static int reset = 1 ; // reset버튼 누름
     public static int goodDay = 0 ; // 7일 연속 기분 좋음
+
+    public static int water = 10 ;
+    public static int soilHumidity = 80 ;
+    public static int airTempeture = 27 ;
+    public static int airHumidity = 50 ;
+
 
 }

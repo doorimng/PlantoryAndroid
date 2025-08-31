@@ -26,7 +26,7 @@ public class OptionActivity extends AppCompatActivity {
         // 각 정보값 progress bar 이용하여 표시
 
         // 토양 습도
-        int soilHumidity = 80 ;
+        int soilHumidity = Data.soilHumidity ;
 
         TextView textSoilHumidity = findViewById(R.id.percentHumid) ;
         textSoilHumidity.setText(soilHumidity +" %") ;
@@ -40,7 +40,7 @@ public class OptionActivity extends AppCompatActivity {
         animationSoilHumidity.start();
 
         // 남은 물 양
-        int water = 60 ;
+        int water = Data.water ;
 
         TextView textWater = findViewById(R.id.percentWater) ;
         textWater.setText(water +" %") ;
@@ -54,7 +54,7 @@ public class OptionActivity extends AppCompatActivity {
         animationWater.start();
 
         // 공기 중 온도
-        int airTemperature = 27 ;
+        int airTemperature = Data.airTempeture ;
 
         TextView textAirTemperature = findViewById(R.id.percentAirTemperature) ;
         textAirTemperature.setText(airTemperature +" 도") ;
@@ -68,7 +68,7 @@ public class OptionActivity extends AppCompatActivity {
         animationAirTempeture.start();
 
         // 공기 중 습도
-        int airHumidity = 50 ;
+        int airHumidity = Data.airHumidity ;
 
         TextView textAirHumidity = findViewById(R.id.percentAirHumidity) ;
         textAirHumidity.setText(airHumidity +" %") ;
