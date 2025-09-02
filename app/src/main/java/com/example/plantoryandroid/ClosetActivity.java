@@ -18,6 +18,10 @@ import androidx.core.view.WindowInsetsCompat;
 public class ClosetActivity extends AppCompatActivity {
     public static int[] itemInstall = Data.questList ;
     int condition = Data.condition, clothes = Data.clothes ;
+    int[] conditionList = QuestActivity.questConditonList ;
+    ImageView character = findViewById(R.id.imageCharacter) ;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,11 +29,26 @@ public class ClosetActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_closet);
 
-        /* [아이템 해금 시스템]
-        * 도전과제 달성 후 아이템 해금 시 아이템 사용 가능
-        * */
-        int[] conditionList = QuestActivity.questConditonList ;
-        ImageView character = findViewById(R.id.imageCharacter) ;
+        // 아이템 해금 시스템
+        ItemUnlock() ;
+
+        // 아이템 장착 시스템
+        ItemInstall() ;
+
+        // 장착 버튼
+        InstallButton() ;
+
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
+    }
+
+    /* [아이템 해금 시스템]
+     * 도전과제 달성 후 아이템 해금 시 아이템 사용 가능
+     * */
+    public void ItemUnlock() {
         character.setImageResource(Data.chracterID[condition][clothes]);
 
         if ( conditionList[1] == 1 ) {
@@ -71,10 +90,12 @@ public class ClosetActivity extends AppCompatActivity {
                 }
             }
         }) ;
+    }
 
-        /* [아이템 장착 시스템]
-        * 해금되어있는 아이템 장착
-        * */
+    /* [아이템 장착 시스템]
+     * 해금되어있는 아이템 장착
+     * */
+    public void ItemInstall() {
         ImageButton buttonFood = findViewById(R.id.itemButtonFood) ;
         buttonFood.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -151,10 +172,12 @@ public class ClosetActivity extends AppCompatActivity {
                 }
             }
         }) ;
+    }
 
-        /* [장착 버튼]
-        * 장착 버튼 누를 시 알람과 함께 기본 캐릭터의 장착 아이템 변경 가능
-        * */
+    /* [장착 버튼]
+     * 장착 버튼 누를 시 알람과 함께 기본 캐릭터의 장착 아이템 변경 가능
+     * */
+    public void InstallButton() {
         Button button = findViewById(R.id.buttonInstallation) ;
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -169,12 +192,6 @@ public class ClosetActivity extends AppCompatActivity {
                 toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
                 toast.show();
             }
-        });
-
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
         });
     }
 
